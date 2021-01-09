@@ -23,3 +23,7 @@ frontend2
 backend
 jenkins
 prometheus
+
+[frontends]
+frontend1
+frontend2

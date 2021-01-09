@@ -1,4 +1,4 @@
-- hosts: frontend1:frontend2
+- hosts: frontends
   become: true
   tasks:
     - name: run housy-frontend

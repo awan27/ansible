@@ -1,0 +1,18 @@
+#Install Prometheus
+- hosts: prometheus
+  tasks:
+    - name: mkdir docker
+      file: 
+        path: /home/rizal/prometheus
+        state: directory
+
+    - name: copy prometheus conf
+      copy:
+        src: prometheus.yml
+        dest: /home/rizal/prometheus/prometheus.yml
+
+    - name: run prometheus
+      command: docker run -p 9090:9090 -d -v /home/rizal/prometheus:/etc/prometheus prom/prometheus
+
+    - name: run grafana
+      command: docker run -p 3000:3000 grafana/grafana

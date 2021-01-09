@@ -5,6 +5,5 @@
   - name: "install Nginx & certbot"
     apt_repository:
       repo: 'ppa:certbot/certbot'
-    apt:
       apt: name={{ item }} state=latest update_cache=yes
       loop: [ 'nginx', 'python-certbox-nginx']

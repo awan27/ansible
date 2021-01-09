@@ -22,9 +22,5 @@
     - name: Update apt and install docker-ce
       apt: update_cache=yes name=docker-ce state=latest
 
-    - name: Install Docker Module for Python
-      pip:
-        name: docker
-
     - name: install node_exporter
       shell: docker run -d --net="host" --pid="host" -v "/:/host:ro,rslave" quay.io/prometheus/node-exporter:latest --path.rootfs=/host

@@ -16,3 +16,10 @@ database new_hostname=database
 jenkins new_hostname=jenkins
 prometheus new_hostname=prometheus
 ansible new_hostname=ansible
+
+[docker]
+frontend1
+frontend2
+backend
+jenkins
+prometheus

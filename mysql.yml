@@ -3,11 +3,8 @@
   become: yes
   tasks:
   - name: Install MySQL
-    apt:
-      name: "{{ item }}"
-    with_items:
-      - python-mysqldb
-      - mysql-server
+    apt: name={{ item }} state=latest update_cache=yes
+    loop: [ 'python-mysqldb', 'mysql-server']
 
   - name: Start the MySQL service
     service: 

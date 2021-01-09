@@ -30,7 +30,7 @@
 
   - name: change bind ip
     lineinfile: 
-      path: /etc/mysql/mysql.conf.d/mysqld.conf
+      path: /etc/mysql/mysql.conf.d/mysqld.cnf
       regexp: 'bind-address' 
       line: 'bind-address - 0.0.0.0'
       backup: 'yes'

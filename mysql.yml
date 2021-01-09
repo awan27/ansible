@@ -1,5 +1,5 @@
-# Setup Database
-- hosts: ansible
+# Setup Database => ganti hosts, nama & password mysql_user, dan nama database
+- hosts: database
   become: yes
   tasks:
   - name: Install MySQL

@@ -1,0 +1,20 @@
+# Git Clone
+- hosts: frontend1:frontend2
+  become: yes
+  tasks:
+  - name: Clone github
+    git:
+      repo: git@github.com:awan27/housy-frontend.git
+      dest: ~/housy-frontend/
+      version: master
+      accept_hostkey: yes
+
+- hosts: backend
+  become: yes
+  tasks:
+  - name: Clone github
+    git:
+      repo: git@github.com:awan27/housy-backend.git
+      dest: ~/housy-backend/
+      version: master
+      accept_hostkey: yes

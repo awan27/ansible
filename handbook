@@ -1,0 +1,7 @@
+#Cara menggunakan ansiblenya
+
+## untuk user
+
+- gunakan akun ubuntu untuk menambahkan user ke setiap server :
+    - edit remote_user dan private key di inventory dengan key pair aws dan ubuntu
+    - jalankan create-user.yml

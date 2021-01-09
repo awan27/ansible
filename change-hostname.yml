@@ -1,0 +1,11 @@
+# ubah hostname => ganti hostnya dan jangan lupa edit inventory
+- hosts: all
+  become: yes
+  tasks:
+  - name: "update hostnames"
+    hostname:
+      name: "{{ new_hostname }}"
+
+  - name: Reboot
+    reboot:
+       reboot_timeout: 3600

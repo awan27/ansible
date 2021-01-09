@@ -1,0 +1,29 @@
+# Buat user baru
+- hosts: all
+  become: yes
+  tasks:
+          - name: "buat user rizal"
+            user:
+                    name: rizal
+                    password: "$6$7VlidBaLFzguBfxV$utLQ.gC2fM7kpzxKdClZBayi7UbgVels9iLie8uh4Ql3Sc1TGrLlwb2QKaqBenRpaQocyu742ojlsWrQuCwEV/"
+                    groups: sudo
+                    state: present
+                    shell: /bin/bash
+                    system: no
+                    createhome: yes
+                    home: /home/rizal
+
+# aktifkan pasword authentication dan reload ssh
+- hosts: all
+  become: yes
+  tasks:
+          - name: passwdauth
+            lineinfile:
+                    path: /etc/ssh/sshd_config
+                    regexp: 'PasswordAuthentication no'
+                    line: PasswordAuthentication yes
+
+          - name: reload ssh
+            systemd:
+                    name: sshd
+                    state: reloaded

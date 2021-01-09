@@ -1,0 +1,18 @@
+nginx ansible_host=10.0.0.110
+frontend1 ansible_host=10.0.1.4
+frontend2 ansible_host=10.0.1.5
+backend ansible_host=10.0.1.6
+database ansible_host=10.0.1.7
+jenkins ansible_host=10.0.1.8
+prometheus ansible_host=10.0.1.9
+ansible ansible_host=10.0.1.10
+
+[hostname]
+nginx new_hostname=nginx
+frontend1 new_hostname=frontend1
+frontend2 new_hostname=frontend2
+backend new_hostname=backend
+database new_hostname=database
+jenkins new_hostname=jenkins
+prometheus new_hostname=prometheus
+ansible new_hostname=ansible

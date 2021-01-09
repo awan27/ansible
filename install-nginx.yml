@@ -2,8 +2,10 @@
 - hosts: nginx
   become: yes
   tasks:
-  - name: "install Nginx & certbot"
+  - name: "add repo certbot"
     apt_repository:
-      repo: 'ppa:certbot/certbot'
-      apt: name={{ item }} state=latest update_cache=yes
-      loop: [ 'nginx', 'python-certbox-nginx']
+        repo: 'ppa:certbot/certbot'
+
+  - name: "install Nginx & Certbot"
+    apt: name={{ item }} state=latest update_cache=yes
+    loop: [ 'nginx', 'python-certbox-nginx']

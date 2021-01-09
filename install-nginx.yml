@@ -4,8 +4,8 @@
   tasks:
   - name: "add repo certbot"
     apt_repository:
-        repo: 'ppa:certbot/certbot'
+      repo: 'ppa:certbot/certbot'
 
   - name: "install Nginx & Certbot"
     apt: name={{ item }} state=latest update_cache=yes
-    loop: [ 'nginx', 'python-certbox-nginx']
+    loop: [ 'nginx', 'python-certbot-nginx']

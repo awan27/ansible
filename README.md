@@ -4,14 +4,14 @@
 
 - Edit File ansible.cfg dan gunakan user ubuntu
 - Jalankan user-create dan hostname-change
-- Edit sudo visudo => rizal     ALL=(ALL) NOPASSWD:ALL
+- x Edit sudo visudo => rizal     ALL=(ALL) NOPASSWD:ALL
 - Lalu jalankan github \config/ssh-key
 - Edit file ansible.cfg dan gunakan user rizal
 - Jalankan Nginx-Install
 
 ## Git Clone
 
-- Jalankan github \config/git-clone
+- Jalankan github \config/git-clone dengan user rizal
 
 
 ## App

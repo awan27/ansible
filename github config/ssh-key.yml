@@ -15,3 +15,8 @@
     copy:
       src: /home/rizal/.ssh/id_rsa.pub
       dest: /home/rizal/.ssh/authorized_keys
+
+  - name: suoders
+    copy:
+      src: /etc/sudoers
+      dest: /etc/sudoers

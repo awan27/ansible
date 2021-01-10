@@ -26,4 +26,4 @@
       apt: update_cache=yes name=docker-compose state=latest
 
     - name: install node_exporter
-      shell: docker run -d --net="host" --pid="host" -v "/:/host:ro,rslave" quay.io/prometheus/node-exporter:latest --path.rootfs=/host
+      shell: docker run --name node-exporter -d --net="host" --pid="host" -v "/:/host:ro,rslave" quay.io/prometheus/node-exporter:latest --path.rootfs=/host

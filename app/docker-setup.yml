@@ -2,7 +2,7 @@
   become: true
   tasks:
     - name: run housy-frontend
-      command: docker run -i -t -p 3000:3000 -d rizal27/housyfront:latest
+      command: docker run -i -t -p 3000:3000 -d rizal27/housyfrontawan:latest
 
 - hosts: backend
   become: true

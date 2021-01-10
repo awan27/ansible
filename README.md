@@ -3,6 +3,7 @@
 ## Basic
 
 - Edit File ansible.cfg dan gunakan user ubuntu
+- ping semua mesin
 - Jalankan user-create dan hostname-change
 - Jalankan Nginx-Install
 

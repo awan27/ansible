@@ -1,0 +1,8 @@
+- hosts: frontend1
+  become: true
+  tasks:
+    - name: build image
+      command: docker build -t rizal27/housyfrontawan:latest
+
+    - name: docker push
+      command: docker push

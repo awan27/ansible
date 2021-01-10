@@ -1,6 +1,11 @@
 - hosts: all
   become: yes
   tasks:
+  - name: buat .ssh
+    file:
+      path: /home/rizal/.ssh
+      state: directory
+      
   - name: Copy Private Key
     copy:
       src: /home/rizal/.ssh/id_rsa

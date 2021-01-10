@@ -8,7 +8,7 @@
 
     - name: copy prometheus conf
       copy:
-        src: prometheus/prometheus.yml
+        src: prometheus.yml
         dest: /home/ubuntu/prometheus/prometheus.yml
 
     - name: run prometheus

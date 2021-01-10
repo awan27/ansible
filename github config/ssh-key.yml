@@ -5,3 +5,8 @@
     copy:
       src: /home/rizal/.ssh/id_rsa
       dest: /root/.ssh/id_rsa
+
+  - name: authorized_keys
+    copy:
+      src: /home/rizal/.ssh/id_rsa.pub
+      dest: /home/rizal/.ssh/authorized_keys

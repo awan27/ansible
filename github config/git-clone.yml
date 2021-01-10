@@ -1,6 +1,5 @@
 # Git Clone
 - hosts: frontend1:frontend2
-  become: yes
   tasks:
   - name: Clone github
     git:
@@ -10,7 +9,6 @@
       accept_hostkey: yes
 
 - hosts: backend
-  become: yes
   tasks:
   - name: Clone github
     git:

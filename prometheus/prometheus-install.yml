@@ -12,7 +12,7 @@
         dest: /home/ubuntu/prometheus/prometheus.yml
 
     - name: run prometheus
-      command: docker run -p 9090:9090 -d -v /home/rizal/prometheus:/etc/prometheus prom/prometheus
+      command: docker run --name prometheus -p 9090:9090 -d -v /home/ubuntu/prometheus:/etc/prometheus prom/prometheus
 
     - name: run grafana
-      command: docker run -p 3000:3000 grafana/grafana
+      command: docker run --name grafana -p 3000:3000 grafana/grafana

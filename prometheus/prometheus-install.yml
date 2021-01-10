@@ -1,5 +1,6 @@
 #Install Prometheus
 - hosts: prometheus
+  become: yes
   tasks:
     - name: mkdir docker
       file: 

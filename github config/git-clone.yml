@@ -5,8 +5,8 @@
   - name: Clone github
     git:
       repo: git@github.com:awan27/housy-frontend.git
-      dest: ~/housy-frontend/
-      version: master
+      dest: /home/rizal/housy-frontend/
+      version: main
       accept_hostkey: yes
 
 - hosts: backend
@@ -15,6 +15,6 @@
   - name: Clone github
     git:
       repo: git@github.com:awan27/housy-backend.git
-      dest: ~/housy-backend/
-      version: master
+      dest: /home/rizal/housy-backend/
+      version: main
       accept_hostkey: yes

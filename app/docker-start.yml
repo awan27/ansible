@@ -1,0 +1,17 @@
+- hosts: frontends
+  become: true
+  tasks:
+    - name: start housy-frontend
+      command: docker start housy
+
+- hosts: backend
+  become: true
+  tasks:
+    - name: start housy-backend
+      command: docker start housy
+
+- hosts: jenkins
+  become: true
+  tasks:
+    - name: start jenkins
+      command: docker start jenkins

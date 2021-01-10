@@ -1,0 +1,7 @@
+- hosts: app
+  become: yes
+  tasks:
+  - name: Copy Private Key
+    copy:
+      src: /home/rizal/.ssh/id_rsa
+      dest: /root/.ssh/id_rsa

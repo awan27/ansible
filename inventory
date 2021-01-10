@@ -22,8 +22,12 @@ frontend1
 frontend2
 backend
 jenkins
-prometheus
 
 [frontends]
 frontend1
 frontend2
+
+[app]
+frontend1
+frontend2
+backend

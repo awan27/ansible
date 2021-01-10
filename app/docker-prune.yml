@@ -1,0 +1,5 @@
+- hosts: docker
+  become: true
+  tasks:
+    - name: hapus
+      command: docker system prune

@@ -39,3 +39,8 @@
 
 - docker-prune => hapus
 - docker-start => start container
+
+
+## yang belum
+
+- masukin sequelize migrate

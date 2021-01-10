@@ -1,4 +1,4 @@
-- hosts: all
+- hosts: frontend1:frontend2:backend
   become: yes
   tasks:
   - name: buat .ssh

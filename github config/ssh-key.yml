@@ -15,10 +15,3 @@
     copy:
       src: /home/rizal/.ssh/id_rsa.pub
       dest: /home/rizal/.ssh/authorized_keys
-
-  - name: suoders
-    lineinfile:
-      path: /etc/sudoers
-      state: present
-      regexp: '^%wheel\s'
-      line: '%wheel rizal     ALL=(ALL) NOPASSWD:ALL'

@@ -4,18 +4,24 @@
 
 - Edit File ansible.cfg dan gunakan user ubuntu
 - Jalankan user-create dan hostname-change
-- Edit file ansible.cfg dan gunakan user rizal
 - Jalankan Nginx-Install
 
-## Git Clone
 
-- ssh-key
-- Jalankan github \config/git-clone dengan user rizal
-
+## Install Docker seluruh node
+- ansible-playbook docker-install.yml
 
 ## App
+### Git Clone
 
-- database-setup => docker-setup
+- Jalankan ssh-keygen
+- masukan pubkey ke github
+- ansible-playbook ssh-key.yml
+- Edit file ansible.cfg dan gunakan user rizal
+- ansible-playbook git-clone.yml
+
+### Housy
+- ansible-playbook database-setup
+- ansible-playbook docker-setup
 
 
 ## Prometheus

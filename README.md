@@ -2,8 +2,10 @@
 
 ## Basic
 
+
 - Edit File ansible.cfg dan gunakan user ubuntu
 - ping semua mesin
+- ansible-playbook update-upgrade
 - Jalankan user-create dan hostname-change
 - Jalankan Nginx-Install
 
@@ -36,6 +38,7 @@
 ### Baru start
 
 - docker-install-node-exporter
+- prometheus-install.yml
 
 ### Sudah Pernah
 

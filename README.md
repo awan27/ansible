@@ -24,6 +24,12 @@
 - ansible-playbook database-setup
 - ansible-playbook docker-setup
 
+## Jenkins
+
+- ansible-playbook ssh-key.yml
+
+
+
 
 ## Prometheus
 

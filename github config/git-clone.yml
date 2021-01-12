@@ -1,5 +1,5 @@
 # Git Clone
-- hosts: frontend1:frontend2
+- hosts: frontend1
   tasks:
   - name: Clone github
     git:

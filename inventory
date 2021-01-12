@@ -1,33 +1,33 @@
-nginx ansible_host=10.0.0.211
+nginx ansible_host=10.0.0.215
 frontend1 ansible_host=10.0.1.4
-frontend2 ansible_host=10.0.1.5
-backend ansible_host=10.0.1.6
-database ansible_host=10.0.1.7
-jenkins ansible_host=10.0.1.8
-prometheus ansible_host=10.0.1.9
-ansible ansible_host=10.0.1.10
+#frontend2 ansible_host=10.0.1.5
+backend ansible_host=10.0.1.5
+database ansible_host=10.0.1.6
+jenkins ansible_host=10.0.1.7
+prometheus ansible_host=10.0.1.8
+#ansible ansible_host=10.0.1.10
 
 [hostname]
 nginx new_hostname=nginx
-frontend1 new_hostname=frontend1
-frontend2 new_hostname=frontend2
+frontend1 new_hostname=frontend
+#frontend2 new_hostname=frontend2
 backend new_hostname=backend
 database new_hostname=database
 jenkins new_hostname=jenkins
 prometheus new_hostname=prometheus
-ansible new_hostname=ansible
+#ansible new_hostname=ansible
 
 [docker]
 frontend1
-frontend2
+#frontend2
 backend
 jenkins
 
 [frontends]
 frontend1
-frontend2
+#frontend2
 
 [app]
 frontend1
-frontend2
+#frontend2
 backend

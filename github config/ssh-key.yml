@@ -5,13 +5,18 @@
     file:
       path: /home/rizal/.ssh
       state: directory
-      
+
   - name: Copy Private Key
     copy:
-      src: /home/rizal/.ssh/id_rsa
-      dest: /home/rizal/.ssh/id_rsa
+      src: /home/rizal/rizal@dumbways
+      dest: /home/rizal/.ssh/rizal@dumbways
 
   - name: authorized_keys
     copy:
-      src: /home/rizal/.ssh/id_rsa.pub
+      src: /home/rizal/rizal@dumbways.pub
       dest: /home/rizal/.ssh/authorized_keys
+
+  - name: config
+    copy:
+      src: /home/rizal/.ssh/config
+      dest: /home/rizal/.ssh/config

@@ -2,4 +2,4 @@
   become: yes
   tasks:
     - name: hapus
-      command: docker system prune
+      command: docker system prune -f

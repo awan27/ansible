@@ -1,16 +1,10 @@
 - hosts: nginx
-#  gather_facts: no
-#  remote_user: "{{ansible_user}}"
-#  become: true
-#  gather_facts: false
   tasks:
-          - debug:
-              msg: "{{ansible_user}}"
-          - name: generate SSH key "{{ssh_name}}"
-            user:
-                 name: "{{ansible_user}}"
-                 generate_ssh_key: yes
-                 ssh_key_type: rsa
-                 ssh_key_bits: 4096
-                 ssh_key_file: .ssh/{{ssh_name}}
-                 fo
+    - name: generate SSH key rizal
+      user:
+        name: "rizal"
+        generate_ssh_key: yes
+        ssh_key_type: rsa
+        ssh_key_bits: 4096
+        ssh_key_file: .ssh/rizal
+        fo

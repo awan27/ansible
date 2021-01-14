@@ -1,0 +1,11 @@
+server {
+
+		listen 80;
+		listen [::]:80;
+        server_name api.rizal.instructype.com;
+
+        location / {
+                proxy_pass http://10.0.1.5:5000;
+        }
+
+}

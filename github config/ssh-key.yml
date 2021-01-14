@@ -1,33 +1,36 @@
+# Feature : Bisa ssh tiap server paswordless, dan connect ke github
+# Edit file config dengan server yang diinginkan
+# Ubah Private key dan Public Key sesuai yang ada
 - hosts: all
   become: yes
   tasks:
-  - name: buat .ssh
+  - name: Buat folder .ssh
     file:
       path: /home/rizal/.ssh
       state: directory
   
-  - name: known_host
+  - name: Membuat file known_hosts
     file:
       path: /home/rizal/.ssh/known_hosts
       state: touch
 
-  - name: Copy Private Key
-    copy:
-      src: /home/rizal/rizal@dumbways
-      dest: /home/rizal/.ssh/rizal@dumbways
-
-  - name: authorized_keys
-    copy:
-      src: /home/rizal/rizal@dumbways.pub
-      dest: /home/rizal/.ssh/authorized_keys
-
-  - name: config
-    copy:
-      src: /home/rizal/.ssh/config
-      dest: /home/rizal/.ssh/config
-
-  - name: akses
+  - name: hak akses
     command: chmod 666 /home/rizal/.ssh/rizal@dumbways
 
   - name: chown
     command: chown -v rizal ~/.ssh/known_hosts
+
+  - name: Salin Private Key ke setiap node
+    copy:
+      src: /home/rizal/rizal@dumbways
+      dest: /home/rizal/.ssh/rizal@dumbways
+
+  - name: memasukan public key ke authorized_keys dan salin ke setiap node
+    copy:
+      src: /home/rizal/rizal@dumbways.pub
+      dest: /home/rizal/.ssh/authorized_keys
+
+  - name: Salin file config ke setiap node
+    copy:
+      src: config
+      dest: /home/rizal/.ssh/config

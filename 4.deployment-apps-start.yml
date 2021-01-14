@@ -4,6 +4,9 @@
     - name: start housy-frontend
       command: docker start housy
 
+    - name: start housy-frontend1
+      command: docker start housy1
+
 - hosts: backend
   become: true
   tasks:

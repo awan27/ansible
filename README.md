@@ -76,7 +76,7 @@ Jalankan 1 => 2 => 0
 ## 3.database [?]
 
 
-## 4.deployment [housy, rizal]
+## 4.deployment [housy, rizal, ubuntu]
 
 - untuk pertama install jalankan `4.deployment-apps-setup.yml` [frontend dan backend node]
 - jika sudah pernah setting, jalankan `4.deployment-apps-start.yml` [frontend dan backend node]

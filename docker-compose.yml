@@ -1,0 +1,7 @@
+- hosts: all
+  become: yes
+  tasks:
+    - name: docker compose
+      copy:
+        src: /usr/bin/docker-compose
+        dest: /usr/bin/docker-compose

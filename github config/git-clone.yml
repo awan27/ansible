@@ -3,16 +3,16 @@
   tasks:
   - name: Clone github
     git:
-      repo: git@github.com:awan27/housy-frontend.git
-      dest: ~/housy-frontend/
-      version: main
+      repo: git@github.com:awan27/housyfrontend.git
+      dest: ~/housyfrontend/
+      version: production
       accept_hostkey: yes
 
 - hosts: backend
   tasks:
   - name: Clone github
     git:
-      repo: git@github.com:awan27/housy-backend.git
-      dest: ~/housy-backend/
-      version: main
+      repo: git@github.com:awan27/housybackend.git
+      dest: ~/housybackend/
+      version: production
       accept_hostkey: yes

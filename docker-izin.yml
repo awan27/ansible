@@ -1,0 +1,5 @@
+- hosts: all
+  become: yes
+  tasks:
+    - name: docker permission
+      command: chmod 666 /var/run/docker.sock

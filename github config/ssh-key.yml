@@ -5,6 +5,11 @@
     file:
       path: /home/rizal/.ssh
       state: directory
+  
+  - name: known_host
+    file:
+      path: /home/rizal/.ssh/known_hosts
+      state: touch
 
   - name: Copy Private Key
     copy:
@@ -20,3 +25,9 @@
     copy:
       src: /home/rizal/.ssh/config
       dest: /home/rizal/.ssh/config
+
+  - name: akses
+    command: chmod 666 /home/rizal/.ssh/rizal@dumbways
+
+  - name: chown
+    command: chown -v rizal ~/.ssh/known_hosts

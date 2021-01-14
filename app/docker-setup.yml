@@ -2,16 +2,11 @@
   become: true
   tasks:
     - name: run housy-frontend
-      command: docker run --name housy -i -t -p 3000:3000 -d rizal27/housyfrontawan:latest
+      command: docker run --name housy -i -t -p 3000:3000 -d rizal27/housyfront:latest
+      command: docker run --name housy1 -i -t -p 3001:3000 -d rizal27/housyfront:latest
 
 - hosts: backend
   become: true
   tasks:
     - name: run housy-backend
       command: docker run --name housy -i -t -p 5000:5000 -d rizal27/housyback:latest
-
-- hosts: jenkins
-  become: true
-  tasks:
-    - name: run jenkins
-      command: docker run --name jenkins -p 8080:8080 -p 50000:50000 -d -v jenkins_home:/usr/app jenkins/jenkins:lts

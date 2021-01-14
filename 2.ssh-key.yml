@@ -18,7 +18,7 @@
     command: chmod 666 /home/rizal/.ssh/rizal@dumbways
 
   - name: chown
-    command: chown -v rizal ~/.ssh/known_hosts
+    command: chown -v rizal /home/rizal/.ssh/known_hosts
 
   - name: Salin Private Key ke setiap node
     copy:

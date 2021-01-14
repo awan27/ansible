@@ -85,12 +85,12 @@ Jalankan 1 => 2 => 0
 - untuk clone repo jalankan `4.deployment-apps-clone.yml`
 
 
-## 5.cicd [universal]
+## 5.cicd [universal, ubuntu]
 
 - untuk pertama install jalankan `5.cicd-jenkins-setup.yml` [jenkins node]
 - jika sudah pernah setting, jalankan `5.cicd-jenkins-start.yml` [jenkins node]
 
-## 6.monitoring [universal]
+## 6.monitoring [universal, ubuntu]
 
 - untuk pertama install jalankan `6.monitoring-node-exporter.yml` dan `6.monitoring-prometheus-install.yml`
 - jika sudah pernah setting, jalankan `6.monitoring-all-start`

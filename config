@@ -1,0 +1,29 @@
+Host myshortname 10.0.1.4
+    HostName 10.0.1.4
+    IdentityFile ~/.ssh/rizal@dumbways
+    User rizal
+
+Host myshortname 10.0.1.5
+    HostName 10.0.1.5
+    IdentityFile ~/.ssh/rizal@dumbways
+    User rizal
+
+Host myshortname 10.0.1.6
+    HostName 10.0.1.6
+    IdentityFile ~/.ssh/rizal@dumbways
+    User rizal
+
+Host myshortname 10.0.1.7
+    HostName 10.0.1.7
+    IdentityFile ~/.ssh/rizal@dumbways
+    User rizal
+
+Host myshortname 10.0.1.8
+    HostName 10.0.1.8
+    IdentityFile ~/.ssh/rizal@dumbways
+    User rizal
+
+Host myshortname github.com
+    HostName github.com
+    IdentityFile ~/.ssh/rizal@dumbways
+    User rizal

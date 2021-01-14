@@ -1,0 +1,6 @@
+# start jenkins
+- hosts: jenkins
+  become: true
+  tasks:
+    - name: start jenkins
+      command: docker start jenkins

@@ -9,9 +9,3 @@
   tasks:
     - name: start housy-backend
       command: docker start housy
-
-- hosts: jenkins
-  become: true
-  tasks:
-    - name: start jenkins
-      command: docker start jenkins

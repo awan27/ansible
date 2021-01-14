@@ -1,0 +1,17 @@
+- hosts: all
+  become: yes
+  tasks:
+    - name: start node-exporter
+      command: docker start node-exporter
+
+- hosts: prometheus
+  become: yes
+  tasks:
+    - name: start prometheus
+      command: docker start prometheus
+
+- hosts: prometheus
+  become: yes
+  tasks:
+    - name: start grafana
+      command: docker start grafana

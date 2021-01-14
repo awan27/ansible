@@ -1,3 +1,4 @@
+# Mengizinkan akses Docker tanpa root
 - hosts: all
   become: yes
   tasks:

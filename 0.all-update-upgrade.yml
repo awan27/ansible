@@ -1,5 +1,6 @@
+# Update Upgrade Paket
 - hosts: all
-  become: true
+  become: yes
   tasks:
     - name: update upgrade
       apt:

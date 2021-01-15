@@ -2,8 +2,8 @@
 - hosts: all
   become: true
   tasks:
-    - name: install node_exporter
+    - name: stop node-exporter
       shell: docker stop node-exporter
 
     - name: hapus
-      command: docker rm node_exporter
+      command: docker rm node-exporter

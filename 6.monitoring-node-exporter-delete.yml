@@ -1,0 +1,9 @@
+# Install Docker dan node exporter
+- hosts: all
+  become: true
+  tasks:
+    - name: install node_exporter
+      shell: docker stop node-exporter
+
+    - name: hapus
+      command: docker rm node_exporter

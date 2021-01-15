@@ -1,4 +1,5 @@
 - hosts: frontend1:backend
+  become: yes
   tasks:
   - name: nodejs repo
     apt_repository:

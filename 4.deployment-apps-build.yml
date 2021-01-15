@@ -6,3 +6,12 @@
 
     - name: docker push
       command: docker push
+
+- hosts: backend
+  become: true
+  tasks:
+    - name: build image
+      command: docker build -t rizal27/housyback:latest .
+
+    - name: docker push
+      command: docker push

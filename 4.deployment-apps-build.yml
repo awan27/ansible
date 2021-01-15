@@ -2,7 +2,7 @@
 - hosts: frontend1
   tasks:
     - name: Pindah frontend
-      command: cd /home/rizal/housyfrontend
+      command: cd housyfrontend
 
     - name: Build image
       command: docker buid -t rizal27/housyfront:latest .
@@ -14,7 +14,7 @@
   become: true
   tasks:
     - name: Pindah backend
-      command: cd /home/rizal/housybackend
+      command: cd housybackend
 
     - name: Build image
       command: docker buid -t rizal27/housyback:latest .

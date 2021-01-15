@@ -1,0 +1,23 @@
+# Feature : salin semua config nginx
+- hosts: nginx
+  become: yes
+  tasks:
+  - name: Salin frontend
+    copy:
+      src: frontend
+      dest: /etc/nginx/sites-enabled/frontend
+
+  - name: Salin backend
+    copy:
+      src: backend
+      dest: /etc/nginx/sites-enabled/backend
+
+  - name: Salin jenkins
+    copy:
+      src: jenkins
+      dest: /etc/nginx/sites-enabled/jenkins
+
+  - name: Salin prometheus
+    copy:
+      src: frontend
+      dest: /etc/nginx/sites-enabled/prometheuss

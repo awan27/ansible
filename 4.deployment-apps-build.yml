@@ -3,7 +3,7 @@
   tasks:
     - name: Build image frontend
        docker_image:
-         path: ~/housyfrontend
+         path: /home/rizal/housyfrontend
          name: rizal27/housyfront
          tag: latest
 
@@ -15,7 +15,7 @@
   tasks:
     - name: Build image backend
        docker_image:
-         path: ~/housybackend
+         path: /home/rizal/housybackend
          name: rizal27/housyback
          tag: latest
 

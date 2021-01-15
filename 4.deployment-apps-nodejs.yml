@@ -1,9 +1,9 @@
 - hosts: frontend1:backend
   tasks:
   - name: nodejs repo
-      apt_repository:
-        repo: https://deb.nodesource.com/setup_10.x | sudo -E bash
-        state: present
+    apt_repository:
+      repo: https://deb.nodesource.com/setup_10.x | sudo -E bash
+      state: present
 
   - name: Install NodeJS
       apt: update_cache=yes name=nodejs state=latest

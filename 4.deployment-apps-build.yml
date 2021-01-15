@@ -2,10 +2,10 @@
 - hosts: frontend1
   tasks:
     - name: Build image frontend
-       docker_image:
-         path: /home/rizal/housyfrontend
-         name: rizal27/housyfront
-         tag: latest
+        docker_image:
+          path: /home/rizal/housyfrontend
+          name: rizal27/housyfront
+          tag: latest
 
     - name: docker push
       command: docker push
@@ -14,10 +14,10 @@
   become: true
   tasks:
     - name: Build image backend
-       docker_image:
-         path: /home/rizal/housybackend
-         name: rizal27/housyback
-         tag: latest
+        docker_image:
+          path: /home/rizal/housybackend
+          name: rizal27/housyback
+          tag: latest
 
     - name: docker push
       command: docker push

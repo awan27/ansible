@@ -1,8 +1,11 @@
+#pakai user rizal !!!
 - hosts: frontend1
-  become: true
   tasks:
-    - name: build image
-      command: docker build -t rizal27/housyfront:latest .
+    - name: Build image frontend
+       docker_image:
+         path: ~/housyfrontend
+         name: rizal27/housyfront
+         tag: latest
 
     - name: docker push
       command: docker push
@@ -10,8 +13,11 @@
 - hosts: backend
   become: true
   tasks:
-    - name: build image
-      command: docker build -t rizal27/housyback:latest .
+    - name: Build image backend
+       docker_image:
+         path: ~/housybackend
+         name: rizal27/housyback
+         tag: latest
 
     - name: docker push
       command: docker push

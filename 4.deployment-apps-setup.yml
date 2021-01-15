@@ -3,6 +3,8 @@
   tasks:
     - name: run housy-frontend
       command: docker run --name housy -i -t -p 3000:3000 -d rizal27/housyfront:latest
+      
+    - name: run housy-frontend1
       command: docker run --name housy1 -i -t -p 3001:3000 -d rizal27/housyfront:latest
 
 - hosts: backend

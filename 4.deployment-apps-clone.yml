@@ -8,14 +8,6 @@
       version: production
       accept_hostkey: yes
 
-  - name: nodejs repo
-      apt_repository:
-        repo: https://deb.nodesource.com/setup_10.x | sudo -E bash
-        state: present
-
-  - name: Install NodeJS
-      apt: update_cache=yes name=nodejs state=latest
-
 - hosts: backend
   tasks:
   - name: Clone github

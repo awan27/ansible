@@ -4,3 +4,6 @@
   tasks:
     - name: docker permission
       command: chmod 666 /var/run/docker.sock
+
+    - name: docker compose permission
+      command: chmod +x /usr/bin/docker-compose

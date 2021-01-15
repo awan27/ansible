@@ -3,7 +3,7 @@
   tasks:
   - name: nodejs repo
     apt_repository:
-      repo: https://deb.nodesource.com/setup_10.x | sudo -E bash
+      repo: https://deb.nodesource.com/setup_10.x
       state: present
 
   - name: Install NodeJS

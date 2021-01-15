@@ -8,29 +8,29 @@
     file:
       path: /home/rizal/.ssh
       state: directory
-  
+
   - name: Membuat file known_hosts
     file:
       path: /home/rizal/.ssh/known_hosts
       state: touch
-
-  - name: hak akses
-    command: chmod 666 /home/rizal/.ssh/rizal@dumbways
 
   - name: chown
     command: chown -v rizal /home/rizal/.ssh/known_hosts
 
   - name: Salin Private Key ke setiap node
     copy:
-      src: /home/rizal/rizal@dumbways
+      src: rizal@dumbways
       dest: /home/rizal/.ssh/rizal@dumbways
 
   - name: memasukan public key ke authorized_keys dan salin ke setiap node
     copy:
-      src: /home/rizal/rizal@dumbways.pub
+      src: rizal@dumbways.pub
       dest: /home/rizal/.ssh/authorized_keys
 
   - name: Salin file config ke setiap node
     copy:
       src: config
       dest: /home/rizal/.ssh/config
+
+  - name: hak akses
+    command: chmod 666 /home/rizal/.ssh/rizal@dumbways

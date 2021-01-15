@@ -1,7 +1,12 @@
+upstream frontend {
+	server 10.0.1.4:3000;
+	server 10.0.1.4:3001;
+}
+
 server {
 
-		listen 80;
-		listen [::]:80;
+	listen 80;
+	listen [::]:80;
         server_name rizal.instructype.com;
 
         location / {

@@ -1,5 +1,5 @@
 # Install Docker dan node exporter
-- hosts: jenkins
+- hosts: all
   become: true
   tasks:
     - name: install node_exporter

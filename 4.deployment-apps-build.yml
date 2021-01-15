@@ -1,23 +1,23 @@
 #pakai user rizal !!!
 - hosts: frontend1
   tasks:
-    - name: Build image frontend
-        docker_image:
-          path: /home/rizal/housyfrontend
-          name: rizal27/housyfront
-          tag: latest
+    - name: Pindah frontend
+      command: cd /home/rizal/housyfrontend
+
+    - name: Build image
+      command: docker buid -t rizal27/housyfront:latest .
 
     - name: docker push
-      command: docker push
+      command: docker push rizal27/housyfront:latest .
 
 - hosts: backend
   become: true
   tasks:
-    - name: Build image backend
-        docker_image:
-          path: /home/rizal/housybackend
-          name: rizal27/housyback
-          tag: latest
+    - name: Pindah backend
+      command: cd /home/rizal/housybackend
+
+    - name: Build image
+      command: docker buid -t rizal27/housyback:latest .
 
     - name: docker push
-      command: docker push
+      command: docker push rizal27/housyback:latest .

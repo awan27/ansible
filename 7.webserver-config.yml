@@ -19,5 +19,10 @@
 
   - name: Salin prometheus
     copy:
-      src: frontend
+      src: prometheuss
       dest: /etc/nginx/sites-enabled/prometheuss
+
+  - name: Salin monitoring
+    copy:
+      src: prometheuss
+      dest: /etc/nginx/sites-enabled/monitoring
